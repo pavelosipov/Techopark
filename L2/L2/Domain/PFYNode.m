@@ -35,4 +35,9 @@ POSRX_DEADLY_INITIALIZER(init)
     return self;
 }
 
+- (void)setName:(NSString *)name {
+    POSRX_CHECK(name.length > 0);
+    _name = [name copy];
+}
+
 @end
